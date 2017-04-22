@@ -1,6 +1,6 @@
 {
   "name": "laravel-lang-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Translator helper inspired from Laravel Translator class",
   "author": "ARCANEDEV",
   "license": "MIT",
@@ -15,7 +15,7 @@
   "scripts": {
     "build": "node_modules/.bin/rollup -c",
     "coveralls": "cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
-    "dev": "npm run build",
+    "prepublish": "npm run build",
     "test": "jest",
     "test-cc": "jest --config ./jest.config.json",
     "watch": "node_modules/.bin/rollup -c -w"
