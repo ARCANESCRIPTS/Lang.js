@@ -1,0 +1,41 @@
+{
+  "name": "laravel-lang-js",
+  "version": "1.0.0",
+  "description": "A Translator helper inspired from Laravel Translator class",
+  "author": "ARCANEDEV",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ARCANEDEV/Lang.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ARCANEDEV/Lang.js/issues"
+  },
+  "main": "dist/Lang.js",
+  "scripts": {
+    "build": "node_modules/.bin/rollup -c",
+    "coveralls": "node_modules/.bin/coveralls",
+    "dev": "npm run build",
+    "test": "jest",
+    "test-cc": "jest --config ./jest.config.json",
+    "watch": "node_modules/.bin/rollup -c -w"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-jest": "^19.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "coveralls": "^2.13.0",
+    "jest": "^19.0.2",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-typescript": "^0.7.7",
+    "rollup-watch": "^3.2.2",
+    "typings": "^2.1.1"
+  }
+}
