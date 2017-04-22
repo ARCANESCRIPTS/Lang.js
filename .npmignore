@@ -1,4 +1,14 @@
-_arcanedev/
+# Editor, IDE
 .idea/
 .vscode/
-dist/
+
+# Build files and directories
+_arcanedev/
+_docs/
+.github/
+coverage/
+test/
+node_modules/
+.editorconfig
+.travis.yml
+yarn.lock

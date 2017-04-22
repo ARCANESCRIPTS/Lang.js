@@ -20,6 +20,7 @@
     "node_modules/*"
   ],
   "files": [
+    "typings/index.d.ts",
     "src/Lang.ts"
   ],
   "compileOnSave": false,
