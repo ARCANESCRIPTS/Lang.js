@@ -14,7 +14,7 @@ interface LangInterface {
      *
      * @param  locale {string} The locale to set.
      */
-    setLocale(locale: string);
+    setLocale(locale: string) : void;
 
     /**
      * Get the fallback locale being used.
@@ -28,14 +28,14 @@ interface LangInterface {
      *
      * @param  fallback {string}  The fallback locale.
      */
-    setFallback(fallback: string);
+    setFallback(fallback: string) : void;
 
     /**
      * Set messages source.
      *
-     * @param  messages  {object} The messages source.
+     * @param  {object}  messages  The messages source.
      */
-    setMessages(messages: any);
+    setMessages(messages: any) : void;
 
     /**
      * Check if the messages is not null.
@@ -47,7 +47,7 @@ interface LangInterface {
     /**
      * Determine if a translation exists for a given locale.
      *
-     * @param  {string}       key
+     * @param  {string}  key
      * @param  {string}  locale
      *
      * @return {boolean}

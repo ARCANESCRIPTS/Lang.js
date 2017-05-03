@@ -39,7 +39,7 @@ class Lang implements LangInterface {
      *
      * @param  locale {string} The locale to set.
      */
-    public setLocale(locale: string) {
+    public setLocale(locale: string) : void {
         this.locale = this.getDefaultLocale(locale);
     }
 
@@ -59,16 +59,16 @@ class Lang implements LangInterface {
      *
      * @return void
      */
-    public setFallback(fallback: string) {
+    public setFallback(fallback: string) : void {
         this.fallback = this.getDefaultLocale(fallback);
     }
 
     /**
      * Set messages source.
      *
-     * @param  messages  {object} The messages source.
+     * @param  {object}  messages The messages source.
      */
-    public setMessages(messages: any) {
+    public setMessages(messages: any) : void {
         this.messages = messages;
     }
 
@@ -158,7 +158,7 @@ class Lang implements LangInterface {
      *
      * @return {string}
      */
-    private getDefaultLocale(locale: any) {
+    private getDefaultLocale(locale: any) : string {
         return locale || document.documentElement.lang || 'en';
     }
 
@@ -174,7 +174,7 @@ class Lang implements LangInterface {
     private getMessage(key: string, locale: string, fallback: boolean) : string {
         let currentLocale = locale || this.getLocale();
 
-        if (this.hasMessagesForLocale(locale) && ! fallback)
+        if ( ! this.hasMessagesForLocale(locale) && ! fallback)
             return key;
 
         let message = _.get(this.messages[currentLocale], key, key);
@@ -192,7 +192,7 @@ class Lang implements LangInterface {
      * @return {boolean}
      */
     private hasMessagesForLocale(locale: string) : boolean {
-        return this.hasMessages() && this.messages[locale] === undefined;
+        return this.hasMessages() && this.messages[locale] !== undefined;
     }
 
     /**
